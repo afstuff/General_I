@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="NIIDDbModelStoreContainer" CdmEntityContainer="NiidDbContext">
+    <EntitySetMapping Name="NIID_MotorDetails_Online">
+      <EntityTypeMapping TypeName="NIIDDbModel.NIID_MotorDetails_Online">
+        <MappingFragment StoreEntitySet="NIID_MotorDetails_Online">
+          <ScalarProperty Name="NIID_NO" ColumnName="NIID_NO" />
+          <ScalarProperty Name="NIID_Username" ColumnName="NIID_Username" />
+          <ScalarProperty Name="NIID_Password" ColumnName="NIID_Password" />
+          <ScalarProperty Name="NIID_NiaNaicomID" ColumnName="NIID_NiaNaicomID" />
+          <ScalarProperty Name="NIID_PolicyNo" ColumnName="NIID_PolicyNo" />
+          <ScalarProperty Name="NIID_InsuredName" ColumnName="NIID_InsuredName" />
+          <ScalarProperty Name="NIID_ContactAddress" ColumnName="NIID_ContactAddress" />
+          <ScalarProperty Name="NIID_GSMNo" ColumnName="NIID_GSMNo" />
+          <ScalarProperty Name="NIID_Email" ColumnName="NIID_Email" />
+          <ScalarProperty Name="NIID_EffectiveCoverDate" ColumnName="NIID_EffectiveCoverDate" />
+          <ScalarProperty Name="NIID_ExpirationDate" ColumnName="NIID_ExpirationDate" />
+          <ScalarProperty Name="NIID_TypeOfCover" ColumnName="NIID_TypeOfCover" />
+          <ScalarProperty Name="NIID_VehicleCategory" ColumnName="NIID_VehicleCategory" />
+          <ScalarProperty Name="NIID_EngineNo" ColumnName="NIID_EngineNo" />
+          <ScalarProperty Name="NIID_ChasisNo" ColumnName="NIID_ChasisNo" />
+          <ScalarProperty Name="NIID_VehicleColor" ColumnName="NIID_VehicleColor" />
+          <ScalarProperty Name="NIID_YearofMake" ColumnName="NIID_YearofMake" />
+          <ScalarProperty Name="NIID_VehicleMake" ColumnName="NIID_VehicleMake" />
+          <ScalarProperty Name="NIID_RegistrationNo" ColumnName="NIID_RegistrationNo" />
+          <ScalarProperty Name="NIID_VehicleType" ColumnName="NIID_VehicleType" />
+          <ScalarProperty Name="NIID_EngineCapacity" ColumnName="NIID_EngineCapacity" />
+          <ScalarProperty Name="NIID_VehicleModel" ColumnName="NIID_VehicleModel" />
+          <ScalarProperty Name="NIID_SumAssured" ColumnName="NIID_SumAssured" />
+          <ScalarProperty Name="NIID_Premium" ColumnName="NIID_Premium" />
+          <ScalarProperty Name="NIID_CoverNoteNo" ColumnName="NIID_CoverNoteNo" />
+          <ScalarProperty Name="NIID_CertificateNo" ColumnName="NIID_CertificateNo" />
+          <ScalarProperty Name="NIID_GeographicalZone" ColumnName="NIID_GeographicalZone" />
+          <ScalarProperty Name="NIID_Status" ColumnName="NIID_Status" />
+          <ScalarProperty Name="NIID_ReturnMessage" ColumnName="NIID_ReturnMessage" />
+          <ScalarProperty Name="NIID_ProcessDate" ColumnName="NIID_ProcessDate" />
+          <ScalarProperty Name="NIID_UploadDate" ColumnName="NIID_UploadDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NIID_MotorDetails">
+      <EntityTypeMapping TypeName="NIIDDbModel.NIID_MotorDetails">
+        <MappingFragment StoreEntitySet="NIID_MotorDetails">
+          <ScalarProperty Name="NIID_Username" ColumnName="NIID_Username" />
+          <ScalarProperty Name="NIID_Password" ColumnName="NIID_Password" />
+          <ScalarProperty Name="NIID_NiaNaicomID" ColumnName="NIID_NiaNaicomID" />
+          <ScalarProperty Name="NIID_PolicyNo" ColumnName="NIID_PolicyNo" />
+          <ScalarProperty Name="NIID_InsuredName" ColumnName="NIID_InsuredName" />
+          <ScalarProperty Name="NIID_ContactAddress" ColumnName="NIID_ContactAddress" />
+          <ScalarProperty Name="NIID_GSMNo" ColumnName="NIID_GSMNo" />
+          <ScalarProperty Name="NIID_Email" ColumnName="NIID_Email" />
+          <ScalarProperty Name="NIID_EffectiveCoverDate" ColumnName="NIID_EffectiveCoverDate" />
+          <ScalarProperty Name="NIID_ExpirationDate" ColumnName="NIID_ExpirationDate" />
+          <ScalarProperty Name="NIID_TypeOfCover" ColumnName="NIID_TypeOfCover" />
+          <ScalarProperty Name="NIID_VehicleCategory" ColumnName="NIID_VehicleCategory" />
+          <ScalarProperty Name="NIID_EngineNo" ColumnName="NIID_EngineNo" />
+          <ScalarProperty Name="NIID_ChasisNo" ColumnName="NIID_ChasisNo" />
+          <ScalarProperty Name="NIID_VehicleColor" ColumnName="NIID_VehicleColor" />
+          <ScalarProperty Name="NIID_YearofMake" ColumnName="NIID_YearofMake" />
+          <ScalarProperty Name="NIID_VehicleMake" ColumnName="NIID_VehicleMake" />
+          <ScalarProperty Name="NIID_RegistrationNo" ColumnName="NIID_RegistrationNo" />
+          <ScalarProperty Name="NIID_VehicleType" ColumnName="NIID_VehicleType" />
+          <ScalarProperty Name="NIID_EngineCapacity" ColumnName="NIID_EngineCapacity" />
+          <ScalarProperty Name="NIID_VehicleModel" ColumnName="NIID_VehicleModel" />
+          <ScalarProperty Name="NIID_SumAssured" ColumnName="NIID_SumAssured" />
+          <ScalarProperty Name="NIID_Premium" ColumnName="NIID_Premium" />
+          <ScalarProperty Name="NIID_CoverNoteNo" ColumnName="NIID_CoverNoteNo" />
+          <ScalarProperty Name="NIID_CertificateNo" ColumnName="NIID_CertificateNo" />
+          <ScalarProperty Name="NIID_GeographicalZone" ColumnName="NIID_GeographicalZone" />
+          <ScalarProperty Name="NIID_Status" ColumnName="NIID_Status" />
+          <ScalarProperty Name="NIID_ReturnMessage" ColumnName="NIID_ReturnMessage" />
+          <ScalarProperty Name="NIID_ProcessDate" ColumnName="NIID_ProcessDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
