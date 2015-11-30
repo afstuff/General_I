@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NIIDDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ABSDATA_TRANSIT.dbo.NIID_MotorDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="NIID_MotorDetails">
+          <Key>
+            <PropertyRef Name="NIID_Username" />
+          </Key>
+          <Property Name="NIID_Username" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="NIID_Password" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_NiaNaicomID" Type="nvarchar" MaxLength="30" />
+          <Property Name="NIID_PolicyNo" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_InsuredName" Type="nvarchar" MaxLength="250" />
+          <Property Name="NIID_ContactAddress" Type="nvarchar" MaxLength="750" />
+          <Property Name="NIID_GSMNo" Type="nvarchar" MaxLength="250" />
+          <Property Name="NIID_Email" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_EffectiveCoverDate" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_ExpirationDate" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_TypeOfCover" Type="nvarchar" MaxLength="50" />
+          <Property Name="NIID_VehicleCategory" Type="nvarchar" MaxLength="30" />
+          <Property Name="NIID_EngineNo" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_ChasisNo" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_VehicleColor" Type="nvarchar" MaxLength="15" />
+          <Property Name="NIID_YearofMake" Type="nvarchar" MaxLength="5" />
+          <Property Name="NIID_VehicleMake" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_RegistrationNo" Type="nvarchar" MaxLength="120" />
+          <Property Name="NIID_VehicleType" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_EngineCapacity" Type="nvarchar" MaxLength="10" />
+          <Property Name="NIID_VehicleModel" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_SumAssured" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_Premium" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_CoverNoteNo" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_CertificateNo" Type="nvarchar" MaxLength="100" />
+          <Property Name="NIID_GeographicalZone" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_Status" Type="nvarchar" MaxLength="10" />
+          <Property Name="NIID_ReturnMessage" Type="nvarchar" MaxLength="250" />
+          <Property Name="NIID_ProcessDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NIID_MotorDetails_Online">
+          <Key>
+            <PropertyRef Name="NIID_NO" />
+          </Key>
+          <Property Name="NIID_NO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NIID_Username" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_Password" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_NiaNaicomID" Type="nvarchar" MaxLength="30" />
+          <Property Name="NIID_PolicyNo" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_InsuredName" Type="nvarchar" MaxLength="250" />
+          <Property Name="NIID_ContactAddress" Type="nvarchar" MaxLength="750" />
+          <Property Name="NIID_GSMNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="NIID_Email" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_EffectiveCoverDate" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_ExpirationDate" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_TypeOfCover" Type="nvarchar" MaxLength="50" />
+          <Property Name="NIID_VehicleCategory" Type="nvarchar" MaxLength="30" />
+          <Property Name="NIID_EngineNo" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_ChasisNo" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_VehicleColor" Type="nvarchar" MaxLength="15" />
+          <Property Name="NIID_YearofMake" Type="nvarchar" MaxLength="5" />
+          <Property Name="NIID_VehicleMake" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_RegistrationNo" Type="nvarchar" MaxLength="120" />
+          <Property Name="NIID_VehicleType" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_EngineCapacity" Type="nvarchar" MaxLength="10" />
+          <Property Name="NIID_VehicleModel" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_SumAssured" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_Premium" Type="nvarchar" MaxLength="25" />
+          <Property Name="NIID_CoverNoteNo" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_CertificateNo" Type="nvarchar" MaxLength="100" />
+          <Property Name="NIID_GeographicalZone" Type="nvarchar" MaxLength="150" />
+          <Property Name="NIID_Status" Type="nvarchar" MaxLength="10" />
+          <Property Name="NIID_ReturnMessage" Type="nvarchar" MaxLength="250" />
+          <Property Name="NIID_ProcessDate" Type="datetime" />
+          <Property Name="NIID_UploadDate" Type="date" />
+        </EntityType>
+        <EntityContainer Name="NIIDDbModelStoreContainer">
+          <EntitySet Name="NIID_MotorDetails_Online" EntityType="Self.NIID_MotorDetails_Online" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NIID_MotorDetails" EntityType="Self.NIID_MotorDetails" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[NIID_MotorDetails].[NIID_Username] AS [NIID_Username], 
+[NIID_MotorDetails].[NIID_Password] AS [NIID_Password], 
+[NIID_MotorDetails].[NIID_NiaNaicomID] AS [NIID_NiaNaicomID], 
+[NIID_MotorDetails].[NIID_PolicyNo] AS [NIID_PolicyNo], 
+[NIID_MotorDetails].[NIID_InsuredName] AS [NIID_InsuredName], 
+[NIID_MotorDetails].[NIID_ContactAddress] AS [NIID_ContactAddress], 
+[NIID_MotorDetails].[NIID_GSMNo] AS [NIID_GSMNo], 
+[NIID_MotorDetails].[NIID_Email] AS [NIID_Email], 
+[NIID_MotorDetails].[NIID_EffectiveCoverDate] AS [NIID_EffectiveCoverDate], 
+[NIID_MotorDetails].[NIID_ExpirationDate] AS [NIID_ExpirationDate], 
+[NIID_MotorDetails].[NIID_TypeOfCover] AS [NIID_TypeOfCover], 
+[NIID_MotorDetails].[NIID_VehicleCategory] AS [NIID_VehicleCategory], 
+[NIID_MotorDetails].[NIID_EngineNo] AS [NIID_EngineNo], 
+[NIID_MotorDetails].[NIID_ChasisNo] AS [NIID_ChasisNo], 
+[NIID_MotorDetails].[NIID_VehicleColor] AS [NIID_VehicleColor], 
+[NIID_MotorDetails].[NIID_YearofMake] AS [NIID_YearofMake], 
+[NIID_MotorDetails].[NIID_VehicleMake] AS [NIID_VehicleMake], 
+[NIID_MotorDetails].[NIID_RegistrationNo] AS [NIID_RegistrationNo], 
+[NIID_MotorDetails].[NIID_VehicleType] AS [NIID_VehicleType], 
+[NIID_MotorDetails].[NIID_EngineCapacity] AS [NIID_EngineCapacity], 
+[NIID_MotorDetails].[NIID_VehicleModel] AS [NIID_VehicleModel], 
+[NIID_MotorDetails].[NIID_SumAssured] AS [NIID_SumAssured], 
+[NIID_MotorDetails].[NIID_Premium] AS [NIID_Premium], 
+[NIID_MotorDetails].[NIID_CoverNoteNo] AS [NIID_CoverNoteNo], 
+[NIID_MotorDetails].[NIID_CertificateNo] AS [NIID_CertificateNo], 
+[NIID_MotorDetails].[NIID_GeographicalZone] AS [NIID_GeographicalZone], 
+[NIID_MotorDetails].[NIID_Status] AS [NIID_Status], 
+[NIID_MotorDetails].[NIID_ReturnMessage] AS [NIID_ReturnMessage], 
+[NIID_MotorDetails].[NIID_ProcessDate] AS [NIID_ProcessDate]
+FROM [dbo].[NIID_MotorDetails] AS [NIID_MotorDetails]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NIIDDbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityType Name="NIID_MotorDetails_Online">
+          <Key>
+            <PropertyRef Name="NIID_NO" />
+          </Key>
+          <Property Name="NIID_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NIID_Username" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_Password" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_NiaNaicomID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_PolicyNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_InsuredName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_ContactAddress" Type="String" MaxLength="750" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_GSMNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_EffectiveCoverDate" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_ExpirationDate" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_TypeOfCover" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_VehicleCategory" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_EngineNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_ChasisNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_VehicleColor" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_YearofMake" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_VehicleMake" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_RegistrationNo" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_VehicleType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_EngineCapacity" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_VehicleModel" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_SumAssured" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_Premium" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_CoverNoteNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_CertificateNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_GeographicalZone" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_ReturnMessage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_ProcessDate" Type="DateTime" Precision="3" />
+          <Property Name="NIID_UploadDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="NIID_MotorDetails">
+          <Key>
+            <PropertyRef Name="NIID_Username" />
+          </Key>
+          <Property Name="NIID_Username" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NIID_Password" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_NiaNaicomID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_PolicyNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_InsuredName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_ContactAddress" Type="String" MaxLength="750" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_GSMNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_EffectiveCoverDate" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_ExpirationDate" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_TypeOfCover" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_VehicleCategory" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_EngineNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_ChasisNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_VehicleColor" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_YearofMake" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_VehicleMake" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_RegistrationNo" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_VehicleType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_EngineCapacity" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_VehicleModel" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_SumAssured" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_Premium" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_CoverNoteNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_CertificateNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_GeographicalZone" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_ReturnMessage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NIID_ProcessDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="NiidDbContext">
+          <EntitySet Name="NIID_MotorDetails_Online" EntityType="Self.NIID_MotorDetails_Online" />
+          <EntitySet Name="NIID_MotorDetails" EntityType="Self.NIID_MotorDetails" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="NIIDDbModelStoreContainer" CdmEntityContainer="NiidDbContext">
+          <EntitySetMapping Name="NIID_MotorDetails_Online">
+            <EntityTypeMapping TypeName="NIIDDbModel.NIID_MotorDetails_Online">
+              <MappingFragment StoreEntitySet="NIID_MotorDetails_Online">
+                <ScalarProperty Name="NIID_NO" ColumnName="NIID_NO" />
+                <ScalarProperty Name="NIID_Username" ColumnName="NIID_Username" />
+                <ScalarProperty Name="NIID_Password" ColumnName="NIID_Password" />
+                <ScalarProperty Name="NIID_NiaNaicomID" ColumnName="NIID_NiaNaicomID" />
+                <ScalarProperty Name="NIID_PolicyNo" ColumnName="NIID_PolicyNo" />
+                <ScalarProperty Name="NIID_InsuredName" ColumnName="NIID_InsuredName" />
+                <ScalarProperty Name="NIID_ContactAddress" ColumnName="NIID_ContactAddress" />
+                <ScalarProperty Name="NIID_GSMNo" ColumnName="NIID_GSMNo" />
+                <ScalarProperty Name="NIID_Email" ColumnName="NIID_Email" />
+                <ScalarProperty Name="NIID_EffectiveCoverDate" ColumnName="NIID_EffectiveCoverDate" />
+                <ScalarProperty Name="NIID_ExpirationDate" ColumnName="NIID_ExpirationDate" />
+                <ScalarProperty Name="NIID_TypeOfCover" ColumnName="NIID_TypeOfCover" />
+                <ScalarProperty Name="NIID_VehicleCategory" ColumnName="NIID_VehicleCategory" />
+                <ScalarProperty Name="NIID_EngineNo" ColumnName="NIID_EngineNo" />
+                <ScalarProperty Name="NIID_ChasisNo" ColumnName="NIID_ChasisNo" />
+                <ScalarProperty Name="NIID_VehicleColor" ColumnName="NIID_VehicleColor" />
+                <ScalarProperty Name="NIID_YearofMake" ColumnName="NIID_YearofMake" />
+                <ScalarProperty Name="NIID_VehicleMake" ColumnName="NIID_VehicleMake" />
+                <ScalarProperty Name="NIID_RegistrationNo" ColumnName="NIID_RegistrationNo" />
+                <ScalarProperty Name="NIID_VehicleType" ColumnName="NIID_VehicleType" />
+                <ScalarProperty Name="NIID_EngineCapacity" ColumnName="NIID_EngineCapacity" />
+                <ScalarProperty Name="NIID_VehicleModel" ColumnName="NIID_VehicleModel" />
+                <ScalarProperty Name="NIID_SumAssured" ColumnName="NIID_SumAssured" />
+                <ScalarProperty Name="NIID_Premium" ColumnName="NIID_Premium" />
+                <ScalarProperty Name="NIID_CoverNoteNo" ColumnName="NIID_CoverNoteNo" />
+                <ScalarProperty Name="NIID_CertificateNo" ColumnName="NIID_CertificateNo" />
+                <ScalarProperty Name="NIID_GeographicalZone" ColumnName="NIID_GeographicalZone" />
+                <ScalarProperty Name="NIID_Status" ColumnName="NIID_Status" />
+                <ScalarProperty Name="NIID_ReturnMessage" ColumnName="NIID_ReturnMessage" />
+                <ScalarProperty Name="NIID_ProcessDate" ColumnName="NIID_ProcessDate" />
+                <ScalarProperty Name="NIID_UploadDate" ColumnName="NIID_UploadDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NIID_MotorDetails">
+            <EntityTypeMapping TypeName="NIIDDbModel.NIID_MotorDetails">
+              <MappingFragment StoreEntitySet="NIID_MotorDetails">
+                <ScalarProperty Name="NIID_Username" ColumnName="NIID_Username" />
+                <ScalarProperty Name="NIID_Password" ColumnName="NIID_Password" />
+                <ScalarProperty Name="NIID_NiaNaicomID" ColumnName="NIID_NiaNaicomID" />
+                <ScalarProperty Name="NIID_PolicyNo" ColumnName="NIID_PolicyNo" />
+                <ScalarProperty Name="NIID_InsuredName" ColumnName="NIID_InsuredName" />
+                <ScalarProperty Name="NIID_ContactAddress" ColumnName="NIID_ContactAddress" />
+                <ScalarProperty Name="NIID_GSMNo" ColumnName="NIID_GSMNo" />
+                <ScalarProperty Name="NIID_Email" ColumnName="NIID_Email" />
+                <ScalarProperty Name="NIID_EffectiveCoverDate" ColumnName="NIID_EffectiveCoverDate" />
+                <ScalarProperty Name="NIID_ExpirationDate" ColumnName="NIID_ExpirationDate" />
+                <ScalarProperty Name="NIID_TypeOfCover" ColumnName="NIID_TypeOfCover" />
+                <ScalarProperty Name="NIID_VehicleCategory" ColumnName="NIID_VehicleCategory" />
+                <ScalarProperty Name="NIID_EngineNo" ColumnName="NIID_EngineNo" />
+                <ScalarProperty Name="NIID_ChasisNo" ColumnName="NIID_ChasisNo" />
+                <ScalarProperty Name="NIID_VehicleColor" ColumnName="NIID_VehicleColor" />
+                <ScalarProperty Name="NIID_YearofMake" ColumnName="NIID_YearofMake" />
+                <ScalarProperty Name="NIID_VehicleMake" ColumnName="NIID_VehicleMake" />
+                <ScalarProperty Name="NIID_RegistrationNo" ColumnName="NIID_RegistrationNo" />
+                <ScalarProperty Name="NIID_VehicleType" ColumnName="NIID_VehicleType" />
+                <ScalarProperty Name="NIID_EngineCapacity" ColumnName="NIID_EngineCapacity" />
+                <ScalarProperty Name="NIID_VehicleModel" ColumnName="NIID_VehicleModel" />
+                <ScalarProperty Name="NIID_SumAssured" ColumnName="NIID_SumAssured" />
+                <ScalarProperty Name="NIID_Premium" ColumnName="NIID_Premium" />
+                <ScalarProperty Name="NIID_CoverNoteNo" ColumnName="NIID_CoverNoteNo" />
+                <ScalarProperty Name="NIID_CertificateNo" ColumnName="NIID_CertificateNo" />
+                <ScalarProperty Name="NIID_GeographicalZone" ColumnName="NIID_GeographicalZone" />
+                <ScalarProperty Name="NIID_Status" ColumnName="NIID_Status" />
+                <ScalarProperty Name="NIID_ReturnMessage" ColumnName="NIID_ReturnMessage" />
+                <ScalarProperty Name="NIID_ProcessDate" ColumnName="NIID_ProcessDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

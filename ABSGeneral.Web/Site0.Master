@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site0.master.cs" Inherits="ABSGeneral.Web.Site0" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/site.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <asp:HyperLink ID="lnkAbsHome" class="navbar-brand" runat="server" Target="_self" NavigateUrl="~/Default.aspx">ABS</asp:HyperLink>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <asp:HyperLink ID="lnkRegister" runat="server" Target="_self" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>
+                        <li>
+                            <asp:HyperLink ID="lnkLogin" runat="server" Target="_self" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+       
+        <div class="container body-content">
+            <div class="pageContentDiv">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="clearfix"></div>
+            <hr />
+            <footer>
+                <span class="pull-left">&copy; <%= DateTime.Now.Year %> - ABS v2.0</span>
+                <span class="pull-right">Company Name and website here
+                </span>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
