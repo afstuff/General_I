@@ -1,0 +1,11 @@
+C:\AFRIK\ABSGeneral\ABSGeneral.Model\bin\Debug\ABSGeneral.Model.dll.config
+C:\AFRIK\ABSGeneral\ABSGeneral.Model\bin\Debug\ABSGeneral.Model.dll
+C:\AFRIK\ABSGeneral\ABSGeneral.Model\bin\Debug\ABSGeneral.Model.pdb
+C:\AFRIK\ABSGeneral\ABSGeneral.Model\obj\Debug\ABSGeneral.Model.dll
+C:\AFRIK\ABSGeneral\ABSGeneral.Model\obj\Debug\ABSGeneral.Model.pdb
+C:\AFRIK\General_I\ABSGeneral.Model\bin\Debug\ABSGeneral.Model.dll.config
+C:\AFRIK\General_I\ABSGeneral.Model\bin\Debug\ABSGeneral.Model.dll
+C:\AFRIK\General_I\ABSGeneral.Model\bin\Debug\ABSGeneral.Model.pdb
+C:\AFRIK\General_I\ABSGeneral.Model\obj\Debug\ABSGeneral.Model.csprojResolveAssemblyReference.cache
+C:\AFRIK\General_I\ABSGeneral.Model\obj\Debug\ABSGeneral.Model.dll
+C:\AFRIK\General_I\ABSGeneral.Model\obj\Debug\ABSGeneral.Model.pdb

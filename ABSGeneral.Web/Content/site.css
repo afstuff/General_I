@@ -1,0 +1,336 @@
+﻿body {
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+/* Set padding to keep content from hitting the edges */
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+#leftMenu {
+    padding-left: 5px;
+    z-index: 10000;
+    /*background-color: rgba(81, 57, 57, 0.78);*/
+}
+
+
+.toggler1 {
+    color: white;
+    font-weight: bold;
+    padding: 7px;
+    text-decoration: none;
+}
+
+
+
+.nav-side-menu {
+    background-color: #2e353d;
+    color: #e1ffff;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: 200;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    top: 0px;
+    width: 300px;
+}
+
+    .nav-side-menu .brand {
+        background-color: #23282e;
+        display: block;
+        font-size: 14px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .nav-side-menu .toggle-btn {
+        display: none;
+    }
+
+    .nav-side-menu ul,
+    .nav-side-menu li {
+        cursor: pointer;
+        line-height: 35px;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        /*    
+    .collapsed{
+       .arrow:before{
+                 font-family: FontAwesome;
+                 content: "\f053";
+                 display: inline-block;
+                 padding-left:10px;
+                 padding-right: 10px;
+                 vertical-align: middle;
+                 float:right;
+            }
+     }
+*/
+    }
+
+        .nav-side-menu ul :not(collapsed) .arrow:before,
+        .nav-side-menu li :not(collapsed) .arrow:before {
+            content: "\f078";
+            display: inline-block;
+            float: right;
+            font-family: FontAwesome;
+            padding-left: 10px;
+            padding-right: 10px;
+            vertical-align: middle;
+        }
+
+        .nav-side-menu ul .active,
+        .nav-side-menu li .active {
+            background-color: #4f5b69;
+            border-left: 3px solid #d19b3d;
+        }
+
+        .nav-side-menu ul .sub-menu li.active,
+        .nav-side-menu li .sub-menu li.active {
+            color: #d19b3d;
+        }
+
+            .nav-side-menu ul .sub-menu li.active a,
+            .nav-side-menu li .sub-menu li.active a {
+                color: #d19b3d;
+            }
+
+        .nav-side-menu ul .sub-menu li,
+        .nav-side-menu li .sub-menu li {
+            background-color: #181c20;
+            border: none;
+            border-bottom: 1px solid #23282e;
+            line-height: 28px;
+            margin-left: 0px;
+        }
+
+            .nav-side-menu ul .sub-menu li:hover,
+            .nav-side-menu li .sub-menu li:hover {
+                background-color: #020203;
+            }
+
+            .nav-side-menu ul .sub-menu li:before,
+            .nav-side-menu li .sub-menu li:before {
+                content: "\f105";
+                display: inline-block;
+                font-family: FontAwesome;
+                padding-left: 10px;
+                padding-right: 10px;
+                vertical-align: middle;
+            }
+
+    .nav-side-menu li {
+        border-bottom: 1px solid #23282e;
+        border-left: 3px solid #2e353d;
+        padding-left: 0px;
+    }
+
+        .nav-side-menu li a {
+            color: #e1ffff;
+            text-decoration: none;
+        }
+
+            .nav-side-menu li a i {
+                padding-left: 10px;
+                padding-right: 20px;
+                width: 20px;
+            }
+
+        .nav-side-menu li:hover {
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            background-color: #4f5b69;
+            border-left: 3px solid #d19b3d;
+            transition: all 1s ease;
+        }
+
+@media (max-width: 767px) {
+    .nav-side-menu {
+        margin-bottom: 10px;
+        position: relative;
+        width: 100%;
+    }
+
+        .nav-side-menu .toggle-btn {
+            background-color: #ffffff;
+            color: #000;
+            cursor: pointer;
+            display: block;
+            padding: 3px;
+            position: absolute;
+            right: 10px;
+            text-align: center;
+            top: 10px;
+            width: 40px;
+            z-index: 10 !important;
+        }
+
+    .brand {
+        font-size: 22px;
+        line-height: 50px !important;
+        padding-left: 20px;
+        text-align: left !important;
+    }
+}
+
+@media (min-width: 767px) {
+    .nav-side-menu .menu-list .menu-content {
+        display: block;
+    }
+}
+
+
+
+/*UI Styles starts*/
+
+#topMenuDiv {
+    padding: 10px;
+    /*margin-top: 5px !important;*/
+}
+
+.textInputMax {
+    width: 400px !important;
+}
+
+.textInputMini {
+    width: 180px !important;
+}
+
+.textInputMini1 {
+    width: 170px !important;
+}
+
+.textInputMidi {
+    width: 90px !important;
+}
+
+.tdLbl {
+    width: 15% !important;
+}
+
+.pageContentDiv {
+    margin-top: 50px;
+}
+
+.dropdown-tasks {
+    width: 300px;
+}
+
+
+
+.panel-heading {
+    padding: 5px 15px;
+}
+
+body {
+    padding-top: 20px;
+}
+
+.panel-body .btn:not(.btn-block) {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+
+.t_light {
+    height:30px !important;
+    width: auto;
+}
+
+.PleaseWait {
+    height: 32px;
+    width: 500px;
+    background-image: url(Images/PleaseWait.gif);
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    line-height: 32px;
+}
+
+.gridview{
+    background-color:#2461BF;
+    height: 40px;
+   /*padding:100px;*/
+   margin:2% auto;
+   
+   
+}
+
+.gridview a{
+  margin:auto 2%;
+    border-radius:50%;
+      background-color:#fff;
+      padding:5px 10px 5px 10px;
+      color:#000;
+      text-decoration:none;
+      -o-box-shadow:1px 1px 1px #111;
+      -moz-box-shadow:1px 1px 1px #111;
+      -webkit-box-shadow:1px 1px 1px #111;
+      box-shadow:1px 1px 1px #111;
+     
+}
+
+.gridview a:hover{
+    background-color:#1e8d12;
+    color:#fff;
+}
+
+.gridview span{
+    background-color:#ae2676;
+    color:#fff;
+     -o-box-shadow:1px 1px 1px #111;
+      -moz-box-shadow:1px 1px 1px #111;
+      -webkit-box-shadow:1px 1px 1px #111;
+      box-shadow:1px 1px 1px #111;
+
+    border-radius:50%;
+    padding:5px 10px 5px 10px;
+    margin: 0 5px;
+}
+
+.marginItem {
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*UI Styles ends*/
+
+

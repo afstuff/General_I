@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NIIDDbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityType Name="NIID_MotorDetails_Online">
+    <Key>
+      <PropertyRef Name="NIID_NO" />
+    </Key>
+    <Property Name="NIID_NO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NIID_Username" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_Password" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_NiaNaicomID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_PolicyNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_InsuredName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_ContactAddress" Type="String" MaxLength="750" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_GSMNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_EffectiveCoverDate" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_ExpirationDate" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_TypeOfCover" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_VehicleCategory" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_EngineNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_ChasisNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_VehicleColor" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_YearofMake" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_VehicleMake" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_RegistrationNo" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_VehicleType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_EngineCapacity" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_VehicleModel" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_SumAssured" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_Premium" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_CoverNoteNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_CertificateNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_GeographicalZone" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_ReturnMessage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_ProcessDate" Type="DateTime" Precision="3" />
+    <Property Name="NIID_UploadDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="NIID_MotorDetails">
+    <Key>
+      <PropertyRef Name="NIID_Username" />
+    </Key>
+    <Property Name="NIID_Username" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NIID_Password" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_NiaNaicomID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_PolicyNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_InsuredName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_ContactAddress" Type="String" MaxLength="750" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_GSMNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_EffectiveCoverDate" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_ExpirationDate" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_TypeOfCover" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_VehicleCategory" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_EngineNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_ChasisNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_VehicleColor" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_YearofMake" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_VehicleMake" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_RegistrationNo" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_VehicleType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_EngineCapacity" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_VehicleModel" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_SumAssured" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_Premium" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_CoverNoteNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_CertificateNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_GeographicalZone" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_ReturnMessage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NIID_ProcessDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="NiidDbContext">
+    <EntitySet Name="NIID_MotorDetails_Online" EntityType="Self.NIID_MotorDetails_Online" />
+    <EntitySet Name="NIID_MotorDetails" EntityType="Self.NIID_MotorDetails" />
+  </EntityContainer>
+</Schema>
