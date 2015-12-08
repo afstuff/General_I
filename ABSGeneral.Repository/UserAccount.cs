@@ -12,7 +12,7 @@ namespace ABSGeneral.Repository
 {
     public class UserAccount
     {
-        static readonly AbsDbContext DbContext = new AbsDbContext();
+        //static readonly AbsDbContext DbContext = new AbsDbContext();
 
         public static string EncryptNew(string icText)
         {
@@ -108,19 +108,27 @@ namespace ABSGeneral.Repository
 
         public static string GetUserIdName(string userId)
         {
-            ABSPASSTAB absuser = DbContext.ABSPASSTABs.FirstOrDefault(u => u.PWD_ID == userId);
-            if (absuser != null)
+            using (var dbContext = new AbsDbContext())
             {
-                return absuser.PWD_USER_NAME;
+                ABSPASSTAB absuser = dbContext.ABSPASSTABs.FirstOrDefault(u => u.PWD_ID == userId);
+                if (absuser != null)
+                {
+                    return absuser.PWD_USER_NAME;
+                }
+                return "Invalid CODE";
             }
-            return "Invalid CODE";
+
         }
 
         public static ABSPASSTAB GetUserIdLogin(string userId, string userPwd)
         {
-            var newPwd = EncryptNew(userPwd);
-            ABSPASSTAB absuser = DbContext.ABSPASSTABs.FirstOrDefault(u => u.PWD_ID == userId && u.PWD_CODE == newPwd);
-            return absuser;
+            using (var dbContext = new AbsDbContext())
+            {
+                var newPwd = EncryptNew(userPwd);
+                ABSPASSTAB absuser =
+                    dbContext.ABSPASSTABs.FirstOrDefault(u => u.PWD_ID == userId && u.PWD_CODE == newPwd);
+                return absuser;
+            }
         }
 
     }

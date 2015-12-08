@@ -13,13 +13,16 @@ namespace ABSGeneral.Repository
 {
     public class NiidModule
     {
-        static readonly NiidDbContext DbContext = new NiidDbContext();
+        //static readonly NiidDbContext DbContext = new NiidDbContext();
 
         public int NetworkStatus()
         {
             try
             {
-                NIID_MotorDetails_Online md = DbContext.NIID_MotorDetails_Online.FirstOrDefault(m => m.NIID_NO == 1);
+                using (var dbContext = new NiidDbContext())
+                {
+                    NIID_MotorDetails_Online md = dbContext.NIID_MotorDetails_Online.FirstOrDefault(m => m.NIID_NO == 1);
+                }
             }
             catch (NetworkInformationException v)
             {
@@ -39,12 +42,11 @@ namespace ABSGeneral.Repository
 
         public IQueryable<NIID_MotorDetails_Online> GetVehicleDateailsAll()
         {
-            //using (DbContext)
-            //{
-            IQueryable<NIID_MotorDetails_Online> motorDetails = DbContext.NIID_MotorDetails_Online.Where(n => n.NIID_Status != "X");
-            return motorDetails;
-            //}
-
+            using (var dbContext = new NiidDbContext())
+            {
+                IQueryable<NIID_MotorDetails_Online> motorDetails = dbContext.NIID_MotorDetails_Online.Where(n => n.NIID_Status != "X");
+                return motorDetails;
+            }
         }
 
         public IQueryable<NIID_MotorDetails_Online> GetMotorDetailsOnlineByDate(DateTime? startDate, DateTime? endDate, int filter, string sValue)
@@ -103,33 +105,38 @@ namespace ABSGeneral.Repository
 
             if (filter == 4)
             {
-                md = GetVehicleDateailsAll();
-                IQueryable<NIID_MotorDetails_Online> newMd = from e in DbContext.NIID_MotorDetails_Online
-                                                             where (e.NIID_UploadDate >= startDate && e.NIID_UploadDate <= endDate)
-                                                             && e.NIID_Status=="P" 
-                                                             //&& e.NIID_RegistrationNo.ToLower().Contains(sValue.ToLower())
-                                                             select e;
-                if (newMd != null)
+                using (var dbContext = new NiidDbContext())
                 {
-                    return newMd;
+                    md = GetVehicleDateailsAll();
+                    IQueryable<NIID_MotorDetails_Online> newMd = from e in dbContext.NIID_MotorDetails_Online
+                                                                 where (e.NIID_UploadDate >= startDate && e.NIID_UploadDate <= endDate)
+                                                                       && e.NIID_Status == "P"
+                                                                 //&& e.NIID_RegistrationNo.ToLower().Contains(sValue.ToLower())
+                                                                 select e;
+                    if (newMd != null)
+                    {
+                        return newMd;
+                    }
                 }
             }
 
             if (filter == 5)
             {
-               // md = GetVehicleDateailsAll();
-                IQueryable<NIID_MotorDetails_Online> newMd = from e in DbContext.NIID_MotorDetails_Online
-                                                             where (e.NIID_UploadDate >= startDate && e.NIID_UploadDate <= endDate)
-                                                             && e.NIID_Status == "A" 
-                                                             //&& e.NIID_Status == "X"
-                                                             //&& e.NIID_RegistrationNo.ToLower().Contains(sValue.ToLower())
-                                                             select e;
-                if (newMd != null)
+                using (var dbContext = new NiidDbContext())
                 {
-                    return newMd;
+                    // md = GetVehicleDateailsAll();
+                    IQueryable<NIID_MotorDetails_Online> newMd = from e in dbContext.NIID_MotorDetails_Online
+                                                                 where (e.NIID_UploadDate >= startDate && e.NIID_UploadDate <= endDate)
+                                                                       && e.NIID_Status == "A"
+                                                                 //&& e.NIID_Status == "X"
+                                                                 //&& e.NIID_RegistrationNo.ToLower().Contains(sValue.ToLower())
+                                                                 select e;
+                    if (newMd != null)
+                    {
+                        return newMd;
+                    }
                 }
             }
-
             if ((filter == 3 || filter == 2 || filter == 1) && sValue == "*")
             {
                 md = GetVehicleDateailsAll();
@@ -149,16 +156,22 @@ namespace ABSGeneral.Repository
 
         public void Update(int polyNo)
         {
-            NIID_MotorDetails_Online md = DbContext.NIID_MotorDetails_Online.FirstOrDefault(p => p.NIID_NO == polyNo);
-            md.NIID_Status = "X";
-            DbContext.SaveChanges();
+            using (var dbContext = new NiidDbContext())
+            {
+                NIID_MotorDetails_Online md = dbContext.NIID_MotorDetails_Online.FirstOrDefault(p => p.NIID_NO == polyNo);
+                md.NIID_Status = "X";
+                dbContext.SaveChanges();
+            }
         }
 
         public void Update1(int polyNo)
         {
-            NIID_MotorDetails_Online md = DbContext.NIID_MotorDetails_Online.FirstOrDefault(p => p.NIID_NO == polyNo);
-            md.NIID_Status = "P";
-            DbContext.SaveChanges();
+            using (var dbContext = new NiidDbContext())
+            {
+                NIID_MotorDetails_Online md = dbContext.NIID_MotorDetails_Online.FirstOrDefault(p => p.NIID_NO == polyNo);
+                md.NIID_Status = "P";
+                dbContext.SaveChanges();
+            }
         }
     }
 }
